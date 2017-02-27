@@ -1,0 +1,42 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="full-width-container">
+  <div class="container">
+    <h1>FORM</h1>
+    {{ message }}
+    <form method="post" enctype="multipart/form-data">
+      <p>
+        <label for="image">Question image</label>
+        <input id="image" name="image" type="file" value="">
+      </p>
+
+      <p>
+      <label for="question">Question:</label>
+      <textarea id="question" name="question"></textarea>
+      </p>
+      <p>
+      <label for="answer-a">A:</label>
+      <input id="answer-a" name="answer-a" type="text">
+      <input value="0" name="correct-answer" type="radio">
+      </p>
+      <p>
+      <label for="answer-b">B:</label>
+      <input id="answer-b" name="answer-b" type="text">
+      <input value="1" name="correct-answer" type="radio">
+      </p>
+      <p>
+      <label for="answer-c">C:</label>
+      <input id="answer-c" name="answer-c" type="text">
+      <input value="2" name="correct-answer" type="radio">
+      </p>
+      <p>
+      <label for="answer-d">D:</label>
+      <input id="answer-d" name="answer-d" type="text">
+      <input value="3" name="correct-answer" type="radio">
+      </p>
+      <input type="submit" value="submit">
+    </form>
+  </div>
+</div>
+{% endblock %}
